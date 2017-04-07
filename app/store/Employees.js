@@ -3,18 +3,18 @@ Ext.define('QuickStart.store.Employees', {
     alias: 'store.employees',
 
     fields: [
-    'firstName',
-    'lastName',
-    {
-        name: 'officeLocation',
-        convert: function(value) {
-            if (value && value.isModel) {
-                return value.get('text');
+        'firstName',
+        'lastName',
+        {
+            name: 'officeLocation',
+            convert: function(value) {
+                if (value && value.isModel) {
+                    return value.get('text');
+                }
+                return value;
             }
-            return value;
-        }
-    },
-    'phoneNumber'
+        },
+        'phoneNumber'
     ],
 
     proxy: {
