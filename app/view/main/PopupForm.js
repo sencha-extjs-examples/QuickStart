@@ -33,13 +33,13 @@ Ext.define('QuickStart.view.main.PopupForm', {
         bind: '{employee.officeLocation}',
         options: [{
             text: "Redwood City, CA",
-            value: 'rwcca'
+            value: 'Redwood City, CA'
         }, {
             text: "Lawrence, KS",
-            value: 'lk'
+            value: 'Lawrence, KS'
         }, {
             text: "Frederick, MD",
-            value: 'fmd'
+            value: 'Frederick, MD'
         }],
         defaultTabletPickerConfig: {
             height: 200
