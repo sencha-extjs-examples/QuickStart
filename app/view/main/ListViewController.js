@@ -3,9 +3,12 @@ Ext.define('QuickStart.view.main.ListViewController', {
     alias: 'controller.listview',
 
     onPopupForm: function (view, index, item, record) {
-        Ext.Viewport.add({
-            xtype: 'popupform',
-            width: 400,
+        var popupWindow = new QuickStart.view.main.PopupForm({
+            id: 'rec_update',
+            width:  400,
+            height: 400,
+            centered: true,
+            modal: true,
             record: record,
             viewModel : {
                 data: {
@@ -13,5 +16,7 @@ Ext.define('QuickStart.view.main.ListViewController', {
                 }
             }
         });
+        Ext.Viewport.add(popupWindow);
+        popupWindow.show();
     }
 });
